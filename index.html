@@ -1,804 +1,162 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AliNagheli</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AliNagheli English - آموزش زبان انگلیسی</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Tahoma, Segoe UI, Geneva, Verdana, sans-serif;
+        }
 
-<style>
-*{box-sizing:border-box}
-body{margin:0;background:#f5f2ff;color:#29213d;font-family:Tahoma,Arial;padding-bottom:82px}
-header{background:linear-gradient(135deg,#7c3aed,#4c1d95);color:#fff;padding:24px 18px;border-radius:0 0 28px 28px}
-header h1{margin:8px 0;font-size:27px}
-main{padding:14px;max-width:650px;margin:auto}
-.page{display:none}.page.active{display:block}
-.card{background:#fff;padding:17px;margin:12px 0;border-radius:20px;box-shadow:0 4px 16px #00000010}
-input,select,textarea{width:100%;padding:12px;margin:6px 0;border:1px solid #ddd;border-radius:12px;font-family:Tahoma}
-textarea{min-height:80px}
-button{border:0;border-radius:12px;padding:12px;width:100%;margin:5px 0;background:#6d28d9;color:white;font-family:Tahoma;cursor:pointer}
-button:active{transform:scale(.98)}
-.red{background:#dc2626}.green{background:#16a34a}.gray{background:#64748b}.orange{background:#ea580c}
-.bottom{position:fixed;bottom:0;left:0;right:0;height:72px;background:#fff;display:grid;grid-template-columns:repeat(5,1fr);box-shadow:0 -4px 18px #0002;z-index:20}
-.bottom button{background:white;color:#555;margin:0;border-radius:0;font-size:11px}
-.bottom button.active{color:#6d28d9;font-weight:bold}
-.stat{display:flex;justify-content:space-between;padding:13px;background:#faf9ff;border-radius:13px;margin:8px 0}
-.student,.day,.session{background:#faf9ff;padding:14px;margin:10px 0;border-radius:15px;border-right:5px solid #6d28d9}
-.badge{display:inline-block;background:#ede9fe;color:#6d28d9;padding:6px 10px;border-radius:20px;font-size:12px;margin:3px}
-.progress{height:12px;background:#eee;border-radius:20px;overflow:hidden}
-.progress div{height:100%;background:#7c3aed}
-.modal{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;padding:15px;z-index:50}
-.modalBox{background:#fff;width:100%;max-width:560px;max-height:92vh;overflow:auto;padding:18px;border-radius:22px}
-.dayTitle{font-weight:bold;color:#6d28d9;font-size:18px}
-.empty{text-align:center;color:#888;padding:20px}
-h2{margin-top:0}
-hr{border:0;border-top:1px solid #eee;margin:18px 0}
-</style>
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: #0f2b5c;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 0.8rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffca28;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero button {
+            background-color: #ffca28;
+            color: #1e3c72;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #ffb300;
+            transform: translateY(-2px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-top: 4px solid #2a5298;
+        }
+
+        .card h3 {
+            color: #1e3c72;
+            margin-bottom: 0.8rem;
+        }
+
+        footer {
+            background-color: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-<small>Personal Teacher Manager</small>
-<h1>AliNagheli 👋</h1>
-<div>مدیریت هوشمند کلاس‌های زبان</div>
-</header>
-
-<main>
-
-<!-- DASHBOARD -->
-<section id="home" class="page active">
-
-<div class="card">
-<h2>🏠 داشبورد</h2>
-
-<div class="stat"><span>👨‍🎓 دانش‌آموزان</span><b id="studentCount">0</b></div>
-<div class="stat"><span>📅 کلاس‌ها</span><b id="classCount">0</b></div>
-<div class="stat"><span>📝 جلسات</span><b id="sessionCount">0</b></div>
-<div class="stat"><span>🔴 بدهی</span><b id="balance">0</b></div>
-</div>
-
-<div class="card">
-<h3>⚡ دسترسی سریع</h3>
-<button onclick="page('studentsPage')">👨‍🎓 مدیریت دانش‌آموزان</button>
-<button onclick="page('schedule')">📅 برنامه کلاس‌ها</button>
-<button onclick="page('reports')">📊 گزارش‌ها</button>
-</div>
-
-</section>
-
-
-<!-- STUDENTS -->
-<section id="studentsPage" class="page">
-
-<div class="card">
-<h2>➕ افزودن دانش‌آموز</h2>
-
-<input id="name" placeholder="نام و نام خانوادگی">
-<input id="phone" placeholder="شماره تماس">
-
-<select id="level">
-<option>مقدماتی</option>
-<option>Elementary</option>
-<option>Pre-Intermediate</option>
-<option>Intermediate</option>
-<option>Upper-Intermediate</option>
-<option>Advanced</option>
-<option>IELTS</option>
-<option>TOEFL</option>
-</select>
-
-<input id="book" placeholder="کتاب فعلی">
-<input id="goal" placeholder="🎯 هدف دانش‌آموز">
-<input id="startDate" type="date">
-<textarea id="strength" placeholder="💪 نقاط قوت"></textarea>
-<textarea id="weakness" placeholder="⚠️ نقاط ضعف"></textarea>
-<input id="tuition" type="number" placeholder="💰 شهریه">
-<input id="paid" type="number" placeholder="💵 مبلغ پرداختی">
-
-<button onclick="addStudent()">💾 ذخیره دانش‌آموز</button>
-</div>
-
-<div class="card">
-<h2>👨‍🎓 دانش‌آموزان</h2>
-<input id="search" placeholder="🔎 جستجو..." oninput="searchStudents()">
-<div id="studentList"></div>
-</div>
-
-</section>
-
-
-<!-- SCHEDULE -->
-<section id="schedule" class="page">
-
-<div class="card">
-<h2>➕ افزودن کلاس</h2>
-
-<input id="cname" placeholder="نام دانش‌آموز">
-
-<select id="day">
-<option>شنبه</option>
-<option>یکشنبه</option>
-<option>دوشنبه</option>
-<option>سه‌شنبه</option>
-<option>چهارشنبه</option>
-<option>پنجشنبه</option>
-<option>جمعه</option>
-</select>
-
-<input id="start" type="time">
-<input id="end" type="time">
-
-<select id="ctype">
-<option>حضوری</option>
-<option>آنلاین</option>
-</select>
-
-<button onclick="addClass()">➕ ثبت کلاس</button>
-</div>
-
-<div class="card">
-<h2>📅 برنامه هفتگی</h2>
-<div id="calendar"></div>
-</div>
-
-</section>
-
-
-<!-- REPORTS -->
-<section id="reports" class="page">
-
-<div class="card">
-<h2>📊 گزارش مالی</h2>
-
-<div class="stat"><span>👨‍🎓 دانش‌آموز</span><b id="rStudents">0</b></div>
-<div class="stat"><span>📅 کلاس</span><b id="rClasses">0</b></div>
-<div class="stat"><span>💰 کل شهریه</span><b id="rTuition">0</b></div>
-<div class="stat"><span>💵 پرداختی</span><b id="rPaid">0</b></div>
-<div class="stat"><span>🔴 بدهی</span><b id="rBalance">0</b></div>
-</div>
-
-<div class="card">
-<h2>📈 گزارش آموزشی</h2>
-<div class="stat"><span>📝 کل جلسات</span><b id="rSessions">0</b></div>
-<div class="stat"><span>⭐ میانگین نمرات</span><b id="rAverage">0</b></div>
-</div>
-
-</section>
-
-
-<!-- SETTINGS -->
-<section id="settings" class="page">
-
-<div class="card">
-<h2>⚙️ تنظیمات</h2>
-
-<p><b>AliNagheli</b></p>
-<p>Teacher Management App</p>
-<p>Version 1.0</p>
-
-<button class="green" onclick="backup()">💾 کپی پشتیبان</button>
-<button class="orange" onclick="exportData()">📤 خروجی اطلاعات</button>
-<button class="red" onclick="clearAll()">🗑️ حذف همه اطلاعات</button>
-
-</div>
-
-</section>
-
-</main>
-
-
-<!-- BOTTOM NAV -->
-<div class="bottom">
-
-<button onclick="page('home')" id="navHome">🏠<br>خانه</button>
-<button onclick="page('schedule')" id="navSchedule">📅<br>کلاس‌ها</button>
-<button onclick="page('studentsPage')" id="navStudents">👨‍🎓<br>شاگردها</button>
-<button onclick="page('reports')" id="navReports">📊<br>گزارش</button>
-<button onclick="page('settings')" id="navSettings">⚙️<br>تنظیمات</button>
-
-</div>
-
-
-<!-- PROFILE MODAL -->
-<div id="profileModal" class="modal">
-<div class="modalBox">
-<div id="profileContent"></div>
-<button class="gray" onclick="closeProfile()">بستن</button>
-</div>
-</div>
-
-
-<!-- EDIT MODAL -->
-<div id="editModal" class="modal">
-<div class="modalBox">
-
-<h2>✏️ ویرایش دانش‌آموز</h2>
-
-<input id="editName" placeholder="نام">
-<input id="editPhone" placeholder="شماره تماس">
-
-<select id="editLevel">
-<option>مقدماتی</option>
-<option>Elementary</option>
-<option>Pre-Intermediate</option>
-<option>Intermediate</option>
-<option>Upper-Intermediate</option>
-<option>Advanced</option>
-<option>IELTS</option>
-<option>TOEFL</option>
-</select>
-
-<input id="editBook" placeholder="کتاب">
-<input id="editGoal" placeholder="هدف">
-<input id="editStartDate" type="date">
-<textarea id="editStrength" placeholder="نقاط قوت"></textarea>
-<textarea id="editWeakness" placeholder="نقاط ضعف"></textarea>
-<input id="editTuition" type="number" placeholder="شهریه">
-<input id="editPaid" type="number" placeholder="پرداختی">
-
-<button onclick="saveEdit()">💾 ذخیره</button>
-<button class="gray" onclick="closeEdit()">انصراف</button>
-
-</div>
-</div>
-
-
-<script>
-
-/* =========================
-   DATA
-========================= */
-
-let students=[];
-let classes=[];
-let editingIndex=-1;
-let profileIndex=-1;
-
-try{
-students=JSON.parse(localStorage.getItem("ali_students")||"[]");
-classes=JSON.parse(localStorage.getItem("ali_classes")||"[]");
-}catch(e){
-students=[];
-classes=[];
-}
-
-students.forEach(s=>{
-if(!s.sessions)s.sessions=[];
-if(!s.goal)s.goal="";
-if(!s.startDate)s.startDate="";
-});
-
-
-function saveData(){
-localStorage.setItem("ali_students",JSON.stringify(students));
-localStorage.setItem("ali_classes",JSON.stringify(classes));
-}
-
-
-/* =========================
-   NAVIGATION
-========================= */
-
-function page(id){
-
-document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));
-
-document.getElementById(id).classList.add("active");
-
-document.querySelectorAll(".bottom button").forEach(x=>x.classList.remove("active"));
-
-let nav={
-home:"navHome",
-schedule:"navSchedule",
-studentsPage:"navStudents",
-reports:"navReports",
-settings:"navSettings"
-};
-
-if(nav[id])document.getElementById(nav[id]).classList.add("active");
-
-update();
-}
-
-
-/* =========================
-   STUDENT
-========================= */
-
-function addStudent(){
-
-let s={
-name:document.getElementById("name").value.trim(),
-phone:document.getElementById("phone").value.trim(),
-level:document.getElementById("level").value,
-book:document.getElementById("book").value.trim(),
-goal:document.getElementById("goal").value.trim(),
-startDate:document.getElementById("startDate").value,
-strength:document.getElementById("strength").value.trim(),
-weakness:document.getElementById("weakness").value.trim(),
-tuition:Number(document.getElementById("tuition").value||0),
-paid:Number(document.getElementById("paid").value||0),
-sessions:[]
-};
-
-if(!s.name){
-alert("نام دانش‌آموز را وارد کن");
-return;
-}
-
-students.push(s);
-saveData();
-showStudents();
-update();
-
-[
-"name","phone","book","goal","startDate",
-"strength","weakness","tuition","paid"
-].forEach(id=>document.getElementById(id).value="");
-
-alert("دانش‌آموز ذخیره شد ✅");
-}
-
-
-function showStudents(list=students){
-
-let html="";
-
-if(!list.length){
-html='<div class="empty">دانش‌آموزی ثبت نشده است.</div>';
-}
-
-list.forEach(s=>{
-
-let i=students.indexOf(s);
-let remain=(s.tuition||0)-(s.paid||0);
-let sessions=(s.sessions||[]).length;
-
-html+=`
-<div class="student">
-
-<h3>👤 ${escapeHTML(s.name)}</h3>
-
-<span class="badge">${escapeHTML(s.level)}</span>
-<span class="badge">📝 ${sessions} جلسه</span>
-
-<p>📞 ${escapeHTML(s.phone||"-")}</p>
-<p>📖 ${escapeHTML(s.book||"-")}</p>
-<p>🎯 ${escapeHTML(s.goal||"-")}</p>
-
-<p>🔴 بدهی:
-<b>${remain.toLocaleString()} تومان</b>
-</p>
-
-<button onclick="openProfile(${i})">👤 پروفایل</button>
-<button onclick="editStudent(${i})">✏️ ویرایش</button>
-<button class="red" onclick="deleteStudent(${i})">🗑️ حذف</button>
-
-</div>`;
-});
-
-document.getElementById("studentList").innerHTML=html;
-}
-
-
-function searchStudents(){
-
-let q=document.getElementById("search").value.toLowerCase().trim();
-
-if(!q){
-showStudents();
-return;
-}
-
-showStudents(students.filter(s=>
-s.name.toLowerCase().includes(q) ||
-(s.phone||"").toLowerCase().includes(q)
-));
-}
-
-
-/* =========================
-   EDIT
-========================= */
-
-function editStudent(i){
-
-editingIndex=i;
-let s=students[i];
-
-document.getElementById("editName").value=s.name;
-document.getElementById("editPhone").value=s.phone;
-document.getElementById("editLevel").value=s.level;
-document.getElementById("editBook").value=s.book;
-document.getElementById("editGoal").value=s.goal||"";
-document.getElementById("editStartDate").value=s.startDate||"";
-document.getElementById("editStrength").value=s.strength||"";
-document.getElementById("editWeakness").value=s.weakness||"";
-document.getElementById("editTuition").value=s.tuition||0;
-document.getElementById("editPaid").value=s.paid||0;
-
-document.getElementById("editModal").style.display="flex";
-}
-
-
-function saveEdit(){
-
-if(editingIndex<0)return;
-
-let oldSessions=students[editingIndex].sessions||[];
-
-students[editingIndex]={
-name:document.getElementById("editName").value.trim(),
-phone:document.getElementById("editPhone").value.trim(),
-level:document.getElementById("editLevel").value,
-book:document.getElementById("editBook").value.trim(),
-goal:document.getElementById("editGoal").value.trim(),
-startDate:document.getElementById("editStartDate").value,
-strength:document.getElementById("editStrength").value.trim(),
-weakness:document.getElementById("editWeakness").value.trim(),
-tuition:Number(document.getElementById("editTuition").value||0),
-paid:Number(document.getElementById("editPaid").value||0),
-sessions:oldSessions
-};
-
-saveData();
-closeEdit();
-showStudents();
-update();
-
-alert("اطلاعات ذخیره شد ✅");
-}
-
-
-function closeEdit(){
-document.getElementById("editModal").style.display="none";
-editingIndex=-1;
-}
-
-
-function deleteStudent(i){
-
-if(confirm("این دانش‌آموز حذف شود؟")){
-students.splice(i,1);
-saveData();
-showStudents();
-update();
-}
-}
-
-
-/* =========================
-   PROFILE + SESSIONS
-========================= */
-
-function openProfile(i){
-
-profileIndex=i;
-let s=students[i];
-let sessions=s.sessions||[];
-
-let tuition=s.tuition||0;
-let paid=s.paid||0;
-let remain=tuition-paid;
-
-let average=0;
-
-if(sessions.length){
-average=Math.round(
-sessions.reduce((a,x)=>a+Number(x.score||0),0)/sessions.length
-);
-}
-
-let html=`
-
-<h2>👤 ${escapeHTML(s.name)}</h2>
-
-<span class="badge">${escapeHTML(s.level)}</span>
-
-<hr>
-
-<p>📞 ${escapeHTML(s.phone||"-")}</p>
-<p>📖 ${escapeHTML(s.book||"-")}</p>
-<p>🎯 ${escapeHTML(s.goal||"-")}</p>
-<p>📅 شروع: ${s.startDate||"-"}</p>
-
-<hr>
-
-<h3>💪 نقاط قوت</h3>
-<p>${escapeHTML(s.strength||"-")}</p>
-
-<h3>⚠️ نقاط ضعف</h3>
-<p>${escapeHTML(s.weakness||"-")}</p>
-
-<hr>
-
-<h3>💰 وضعیت مالی</h3>
-
-<p>شهریه: ${tuition.toLocaleString()} تومان</p>
-<p>پرداختی: ${paid.toLocaleString()} تومان</p>
-<p>بدهی: <b>${remain.toLocaleString()} تومان</b></p>
-
-<hr>
-
-<h3>📈 پیشرفت</h3>
-
-<p>میانگین ارزیابی: <b>${average}/100</b></p>
-
-<div class="progress">
-<div style="width:${average}%"></div>
-</div>
-
-<hr>
-
-<h3>📝 گزارش جلسات</h3>
-`;
-
-if(!sessions.length){
-html+=`<p class="empty">هنوز جلسه‌ای ثبت نشده است.</p>`;
-}
-
-sessions.slice().reverse().forEach((x,index)=>{
-
-html+=`
-<div class="session">
-<b>📅 ${escapeHTML(x.date)}</b>
-<p>📚 ${escapeHTML(x.topic)}</p>
-<p>${escapeHTML(x.report||"-")}</p>
-<p>⭐ ارزیابی: <b>${x.score}/100</b></p>
-</div>
-`;
-});
-
-
-html+=`
-
-<hr>
-
-<h3>➕ ثبت جلسه جدید</h3>
-
-<input id="sessionDate" type="date">
-<input id="sessionTopic" placeholder="موضوع جلسه">
-<textarea id="sessionReport" placeholder="گزارش جلسه"></textarea>
-<input id="sessionScore" type="number" min="0" max="100" placeholder="نمره از 100">
-
-<button onclick="addSession()">💾 ثبت جلسه</button>
-`;
-
-document.getElementById("profileContent").innerHTML=html;
-document.getElementById("profileModal").style.display="flex";
-}
-
-
-function addSession(){
-
-if(profileIndex<0)return;
-
-let date=document.getElementById("sessionDate").value;
-let topic=document.getElementById("sessionTopic").value.trim();
-let report=document.getElementById("sessionReport").value.trim();
-let score=Number(document.getElementById("sessionScore").value||0);
-
-if(!date||!topic){
-alert("تاریخ و موضوع جلسه را وارد کن");
-return;
-}
-
-students[profileIndex].sessions.push({
-date,
-topic,
-report,
-score
-});
-
-saveData();
-update();
-openProfile(profileIndex);
-
-}
-
-
-function closeProfile(){
-document.getElementById("profileModal").style.display="none";
-profileIndex=-1;
-}
-
-
-/* =========================
-   CLASSES
-========================= */
-
-function addClass(){
-
-let c={
-name:document.getElementById("cname").value.trim(),
-day:document.getElementById("day").value,
-start:document.getElementById("start").value,
-end:document.getElementById("end").value,
-type:document.getElementById("ctype").value
-};
-
-if(!c.name){
-alert("نام دانش‌آموز را وارد کن");
-return;
-}
-
-classes.push(c);
-saveData();
-showCalendar();
-update();
-
-document.getElementById("cname").value="";
-document.getElementById("start").value="";
-document.getElementById("end").value="";
-
-alert("کلاس ثبت شد ✅");
-}
-
-
-function showCalendar(){
-
-let days=[
-"شنبه","یکشنبه","دوشنبه","سه‌شنبه",
-"چهارشنبه","پنجشنبه","جمعه"
-];
-
-let html="";
-
-days.forEach(day=>{
-
-let list=classes.filter(c=>c.day===day);
-
-html+=`
-<div class="day">
-<div class="dayTitle">📌 ${day}</div>
-`;
-
-if(!list.length){
-html+=`<p>کلاسی ثبت نشده</p>`;
-}
-
-list.forEach(c=>{
-html+=`
-<p>
-🕐 ${c.start||"--"} تا ${c.end||"--"}<br>
-👤 ${escapeHTML(c.name)}<br>
-🏫 ${c.type}
-</p>
-`;
-});
-
-html+=`</div>`;
-});
-
-document.getElementById("calendar").innerHTML=html;
-}
-
-
-/* =========================
-   REPORT
-========================= */
-
-function update(){
-
-let tuition=0;
-let paid=0;
-let sessions=0;
-let scoreTotal=0;
-let scoreCount=0;
-
-students.forEach(s=>{
-
-tuition+=Number(s.tuition||0);
-paid+=Number(s.paid||0);
-
-(s.sessions||[]).forEach(x=>{
-sessions++;
-scoreTotal+=Number(x.score||0);
-scoreCount++;
-});
-
-});
-
-let balance=tuition-paid;
-let average=scoreCount?Math.round(scoreTotal/scoreCount):0;
-
-document.getElementById("studentCount").innerText=students.length;
-document.getElementById("classCount").innerText=classes.length;
-document.getElementById("sessionCount").innerText=sessions;
-document.getElementById("balance").innerText=balance.toLocaleString();
-
-document.getElementById("rStudents").innerText=students.length;
-document.getElementById("rClasses").innerText=classes.length;
-document.getElementById("rSessions").innerText=sessions;
-document.getElementById("rAverage").innerText=average+"/100";
-
-document.getElementById("rTuition").innerText=tuition.toLocaleString()+" تومان";
-document.getElementById("rPaid").innerText=paid.toLocaleString()+" تومان";
-document.getElementById("rBalance").innerText=balance.toLocaleString()+" تومان";
-}
-
-
-/* =========================
-   BACKUP
-========================= */
-
-function backup(){
-
-let data=JSON.stringify({
-students,
-classes
-},null,2);
-
-navigator.clipboard.writeText(data)
-.then(()=>alert("پشتیبان اطلاعات کپی شد 💾"))
-.catch(()=>alert("مرورگر اجازه کپی خودکار نداد."));
-}
-
-
-function exportData(){
-
-let data=JSON.stringify({
-students,
-classes
-},null,2);
-
-let blob=new Blob([data],{type:"application/json"});
-let url=URL.createObjectURL(blob);
-
-let a=document.createElement("a");
-a.href=url;
-a.download="AliNagheli_Backup.json";
-a.click();
-
-URL.revokeObjectURL(url);
-}
-
-
-function clearAll(){
-
-if(confirm("⚠️ همه اطلاعات دانش‌آموزان و کلاس‌ها حذف شود؟")){
-
-students=[];
-classes=[];
-
-localStorage.removeItem("ali_students");
-localStorage.removeItem("ali_classes");
-
-showStudents();
-showCalendar();
-update();
-
-alert("همه اطلاعات حذف شد.");
-}
-}
-
-
-/* =========================
-   SECURITY
-========================= */
-
-function escapeHTML(text){
-
-return String(text)
-.replace(/&/g,"&amp;")
-.replace(/</g,"&lt;")
-.replace(/>/g,"&gt;")
-.replace(/"/g,"&quot;")
-.replace(/'/g,"&#039;");
-
-}
-
-
-/* =========================
-   START
-========================= */
-
-showStudents();
-showCalendar();
-update();
-page("home");
-
-</script>
+    <header>
+        <h1>AliNagheli English</h1>
+        <p>یادگیری هوشمندانه و آسان زبان انگلیسی</p>
+    </header>
+
+    <nav>
+        <a href="#about">درباره ما</a>
+        <a href="#courses">دوره‌ها</a>
+        <a href="#features">ویژگی‌ها</a>
+        <a href="#contact">تماس با ما</a>
+    </nav>
+
+    <div class="container">
+        <section class="hero" id="about">
+            <h2>مسیر تسلط به زبان انگلیسی از اینجا شروع می‌شود</h2>
+            <p>با متدهای به‌روز و تمرین‌های تعاملی، مهارت‌های مکالمه، شنیداری و گرامر خود را تقویت کنید.</p>
+            <button onclick="alert('به نرم‌افزار AliNagheli English خوش آمدید!')">شروع یادگیری</button>
+        </section>
+
+        <section class="features" id="features">
+            <div class="card">
+                <h3>مکالمه کاربردی</h3>
+                <p>تمرین مکالمات روزمره برای تقویت اعتماد به نفس در صحبت کردن.</p>
+            </div>
+            <div class="card">
+                <h3>واژگان و گرامر</h3>
+                <p>آموزش لغات پرکاربرد همراه با مثال‌های واقعی و گرامر ساده.</p>
+            </div>
+            <div class="card">
+                <h3>تست و ارزیابی</h3>
+                <p>آزمون‌های دوره‌ای جهت سنجش میزان پیشرفت شما در طول مسیر.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>تمامی حقوق برای نرم‌افزار آموزشی AliNagheli English محفوظ است.</p>
+    </footer>
 
 </body>
 </html>
